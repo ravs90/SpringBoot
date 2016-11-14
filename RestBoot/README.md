@@ -1,4 +1,5 @@
 cd RestBoot
+///
 // to build and create jar, run ./gradlew , 
 //it will automatically download gradle and download ddependencies, and build jar and war
 ./gradlew
