@@ -1,4 +1,4 @@
-- To build and create jar, run ./gradlew , it will automatically download gradle and download ddependencies, and build jar and war 
+- To build and create jar, run ./gradlew , it will automatically download gradle and download dependencies, and build jar & war 
 - To run the jar
 
 
