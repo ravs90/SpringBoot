@@ -1,0 +1,58 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+}
+
+jar {
+    baseName = 'RestBoot'
+    version =  '0.1.0'
+}
+
+war {
+    baseName = 'RestBoot'
+    version =  '1.0.0'
+}
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    //compile("org.springframework.boot:spring-boot-starter-web")
+    compile  'org.springframework.boot:spring-boot-starter-web'
+    compile  'com.vmware:vijava:5.5.netapp.4'
+    compile 'com.google.guava:guava:r09'
+    testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
+task hello{
+	println 'Hello Ravneet'
+}
+
+task anotherHello(dependsOn:hello){
+	println 'I am trying to execute after hello'
+}
